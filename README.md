@@ -35,15 +35,15 @@ This simulator project makes use of low-level programming to go through the same
 ### Step 1: Clone the repository
 
 ``` bash
-git clone https://github.com/abzave/Traductor-de-numeros-a-japones.git
-cd Traductor-de-numeros-a-japones
+git clone https://github.com/abzave/SimuladorCPUNASM.git
+cd SimuladorCPUNASM
 ```
 
 ### Step 2: Assemble the project
 
 ``` bash
-nasm -f elf 18168174.ASM
-ld 18168174.o
+nasm -f elf CPU.asm
+ld CPU.o
 ```
 
 ### Step 3: Run the program
@@ -52,5 +52,26 @@ Once assemble, run the executable on the command line.
 
 ## Usage
 
-1. Use the `-j` flag along with the number to translate. The translated number will be displayed in the command line.
-2. Use the `-h` flag to display the help menu.
+1. Select `1` to start executing the multiplication program.
+    1. Select `h` to display the help menu with the list of all commands.
+    2. Select `r` to display the state of the registers.
+        1. Select `1` to display all the registers.
+        2. Select `2` to display the `Program Counter (PC)` register.
+        3. Select `3` to displat the `Instruction Register (IR)`.
+        4. Select `4` to display the `Flags` register.
+        5. Select `5` to display the `AX` register.
+        6. Select `6` to display the `BX` register.
+        7. Select `7` to display the `CX` register.
+        8. Select `8` to display the `Source Index (SI)` register.
+        9. Select `9` to display the `Data Segment (DS)` register.
+        10. Select `10` to display the `Code Segment (CS)` register.
+        11. Select `11` to display the `Memory Address Register (MAR)`.
+        12. Select `0` to go back to the main menu.
+    4. Select `m` to display the state of the memory.
+        1. Select `1` to display all the memory.
+        2. Select `2` to go to a specific memory cell.
+            1. Enter the cell number.
+        4. Select `0` to go back to the main menu.
+    6. Select `e` to run the next instruction.
+    7. Select `s` to go back to the main menu.
+2. Select `0` to exit.
